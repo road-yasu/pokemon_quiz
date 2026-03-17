@@ -1,8 +1,6 @@
 import random
 import pandas as pd
 import streamlit as st
-import aiohttp
-import asyncio
 from pokemon_api import pokemon_data,get_batsugun_tyeps,get_pokemon_types, make_choices_answer
 
 st.set_page_config(page_title='ポケモン バツグン クイズ', layout='centered')
