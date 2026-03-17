@@ -133,9 +133,9 @@ else:
     q = st.session_state.questions[st.session_state.current_index]
     st.write(f"**第 {st.session_state.current_index + 1} 問 / {len(st.session_state.questions)} 問**")
     st.subheader(q["question"])
-    st.write(q['name'])
-    st.write(q['type'])
-    st.image(q['image_url'])
+    question_pokemon = f"**{q['name']}(タイプ：{q['type']})**"
+    st.markdown(question_pokemon)
+    st.image(q['image_url'],width=180)
 
     if not st.session_state['answered']:
         for choice in q['choices']:
@@ -150,9 +150,9 @@ else:
         st.write(f"あなたの回答：**{st.session_state.selected_choice}**")
 
         if st.session_state.is_correct:
-            st.success("正解です")
+            st.success("正解です！")
         else:
-            st.error(f"不正解です。正解は「{q['answer']}」です")
+            st.error(f"不正解です！正解は「{q['answer']}」です")
 
         if st.button("次へ", use_container_width=True):
             next_question()
