@@ -1,7 +1,22 @@
+# Python bytecode (compiled files)
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
 
-.DS_Store
-Thumbs.db
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# IDE/Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Environment variables
+.env
+.secrets
+
+# Data files/Logs
+*.log
+*.csv
+data/
